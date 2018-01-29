@@ -19,6 +19,12 @@ def create_status(access_token, repo_name, pull_request_sha, state):
     return requests.post(url, headers=headers, json={'state': state})
 
 
+def get_commit_messages(access_token, repo_name, pull_request_id):
+    # Call the API to get the commit messages https://api.github.com/repos/pxg/Spoon-Knife/pulls/1/commits
+    # Just return commit messages
+    pass
+
+
 response = create_status(
     access_token=access_token,
     repo_name='pxg/Spoon-Knife',
